@@ -3,6 +3,8 @@ sudo masscan -p 37777 179.126.0.0-179.126.255.255 --rate 5000 -oL ~/Screenshots/
 
 grep 'open tcp 37777' ~/Screenshots/ips.txt | awk '{print $4}' > ~/Screenshots/ips37777.txt
 
+source venv/bin/activate
+
 # Com a lista padrão ips.txt e porta 80
 python3 screenshots.py
 
